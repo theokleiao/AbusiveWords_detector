@@ -1,1 +1,8 @@
-profanityfilter 2.0.6
+profanityfilter>=1.0
+Flask==1.1.1
+re
+nltk==3.4.5
+Flask==1.1.1
+requests==2.22.0
+jsonify==0.5
+gunicorn==19.9.0
