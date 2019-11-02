@@ -1,6 +1,6 @@
 profanityfilter>=1.0
 Flask==1.1.1
-re
+regex==2019.11.1
 nltk==3.4.5
 Flask==1.1.1
 requests==2.22.0
