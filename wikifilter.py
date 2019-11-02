@@ -74,11 +74,11 @@ def censor(text):
 # Initialize the app
 wikifilter = Flask(__name__)
 
-@wikifilter.route('/')
+@app.route('/')
 def home():
     return render_template('index.html')
 
-@wikifilter.route('/dectect', methods=['POST'])
+@app.route('/dectect', methods=['POST'])
 def detect():
     try:
         if request.method == 'POST':
