@@ -72,13 +72,13 @@ def censor(text):
 
 
 # Initialize the app
-app = Flask(__name__)
+wikifilter = Flask(__name__)
 
-@app.route('/')
+@wikifilter.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/dectect', methods=['POST'])
+@wikifilter.route('/dectect', methods=['POST'])
 def detect():
     try:
         if request.method == 'POST':
@@ -90,7 +90,7 @@ def detect():
             return jsonify(summary = prediction)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    wikifilter.run(debug=True)
 
 
 
