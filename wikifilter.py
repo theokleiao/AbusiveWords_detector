@@ -12,10 +12,7 @@ nltk.download('punkt')
 from nltk.corpus import stopwords
 #import traceback
 from nltk.stem import WordNetLemmatizer
-#from nltk import word_tokenize
-from profanityfilter import ProfanityFilter
-pf = ProfanityFilter()
-
+from nltk import word_tokenize
 
 def GetCleanText(text):
   text = text.lower().split()
@@ -58,23 +55,31 @@ def GetCleanText(text):
   text = re.sub(r"\w(\w)\1{2}" ," ", text)
 
   return text
-# text = str()
+text = str()
 
 lemmatizer = WordNetLemmatizer()
 
-# word_list = nltk.word_tokenize(text)
-# lemmatized_output = ' '.join([lemmatizer.lemmatize(w) for w in word_list])
+word_list = nltk.word_tokenize(text)
+lemmatized_output = ' '.join([lemmatizer.lemmatize(w) for w in word_list])
+
+from profanityfilter import ProfanityFilter
+pf = ProfanityFilter()
 
 def censor(text):
     pf.set_censor("*")
-    censored = pf.censor(text)
+    censored = pf.censor("text")
     return censored
+
 
 # Initialize the app
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return render_template('index.html')
+
 @app.route('/dectect', methods=['POST'])
-def detection():
+def detect():
     try:
         if request.method == 'POST':
             post = request.json["post"]
@@ -82,9 +87,9 @@ def detection():
             text = GetCleanText(post)
 
             prediction = censor(text)
-           
+            return jsonify(summary = prediction)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
 
 
