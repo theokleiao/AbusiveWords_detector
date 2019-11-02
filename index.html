@@ -1,4 +1,3 @@
-html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,114 +6,19 @@ html lang="en">
     <link rel="stylesheet" type = "text/css"href="CSS/style.css">
 </head>
 <body>
-<p style="text-align: right"><input type="image" src="https://res.cloudinary.com/kleiao/image/upload/v1566539095/3b26af8a-d190-42ee-9434-8f8410aeebf9_qebgpq.jpg" width="200" height="150"  alt= "Grace"></p>
     <header>
-        <h1>Grace Ada OGBO</h1>
+        <h1>WIKIPOLI PROFANITY DETECTOR</h1>
     </header>
-    <p>No 40 Olabisi Seriki street, off Lekki-Epe expressway, Sangotedo, Ajah <br> Lagos Cell: +234 (0) 8091630116 – <i>eye.agrace@gmail.com</i></p>
-    
+     
             <hr color="red">
             <hr color="red">
-            <h2>Hard Skills</h2>
-            <p>
-                <ul>
-                    <li>Micrrosoft Project</li>
-                    <li>Microsoft Office Suite</li>
-                    <li>Python</li>
-                    <li>R</li>
-                    <li>SQL</li>
-                </ul>
-            </p>
-            <h2>Soft Skills</h2>
-            <p>
-                <ul>
-                    <li>Negotiation</li>
-                    <li>Collaboration</li>
-                    <li>Effective time management</li>
-                    <li>Effective use of resources</li>
-                </ul>
-            </p>
-    
-            <hr color="red">
-    
-    <p><h2>Work Experience</h2></p>
-    <p><b>Management Trainee</b></p>
-    <p><b>Ecobank Nigeria Limited</b> <br> <i>March 2019 - Date</i></p>
-                <p><ul>
-                <li>Receives training and performs duties in seceral departments such as Finance, Clients servies, Sales, Operations and Strategy.</li>
-                <li>Learns the line and staff functions, operations, management viewpoints and company policies and practices that affect each phase of business</li>
-                <li>Sets performance and goals and objectives with upper management.</li>
-                <li>Recives training in functions and operations of related department to facilitate subsequent transferability between department and to provide greater promotional opportunities</li>
-            </ul></p>
-
-    <p><b>Junior Analyst/Strategist</b></p>
-    <p><b>Kuro Communications Limited</b> <br> <i>July 2015 - July 2016</i></p> 
-        <p><ul>
-        <li>Work with the Strategy team to develop concept notes and also develop and nurture them through to award of contract or project commission.</li>
-        <li>Carry out feasibility studies and develop strategies for clients.</li>
-        <li>Led the team on the design of the ‘Retired but not Tired’ project submitted to the Africa Development Bank</li>
-        <li>Designed the operional document for a youth empowerment program funded by the Central Bank</li>
-    </ul></p>
-    
-    <p><b>Head, Test Admin/HR</b></p>
-    <p><b>The Training Center</b> <br> <i>Jan 2013 - October 2013</i></p>
-        <p><ul>
-            <li>Coordinated and administered professional tests for clients.</li>
-            <li>Worked as the public relations person for the company, ensuring ultimate customer satisfation and sustained growth of the company.</li>
-            <li>Assisted in facilitating CompTIA project +</li>
-        </ul></p>
-
-        <hr color="red">
-
-    <p><h2>Education</h2></p>
-<p><b>Masters (Distinction): Petroleum Engineering and Project Development,</b> November 2014 <br>Institute of Petroleum Studies / IFP School – Port Harcourt, Rivers State, Nigeria</p>
-<p><ul>
-    <li>Coursework in Reservoir Geology and Engineering (Static and dynamic modelling of the Alwyn field North Sea), Drilling Engineering & Well Engineering <br> (BHP Data analysis, Well test design and analysis using PERFORM and SAPHIR), Offshore Technology, Petroleum Production Systems, Petroleum Economics (Static and dynamic economic model development) and Projects Development (Field development of SPARROW field North Sea)  </li>
-    <li>Thesis: Enhancing Drilling Performance using Rotary Steerable Systems</li>
-</ul></p>
-
-<p><b>Bachelors (Second Class Upper): Petroleum Engineering</b> 2012 <br> Covenant University – Sango-Ota, Ogun State, Nigeria</p>
-<p><ul>
-    <li>Project: Selecting Economically viable projects using effective profit indices and investment profit margin</li>
-</ul></p>
-
-<p><b>West Africa Senior School Certificate Examination (WASSCE) 2007: Sciences,</b> 2007 <br> Community Secondary School – Abuja, FCT, Nigeria</p>
- 
-<hr color="red">
-
-<p><h2>Awards and Leadership Positions</h2></p>
-<p><ul>
-    <li>Class Rep, Institute of Petroleum Studies, 2013/2014</li>
-    <li>President, SPE-CUSC Covenant University Student Chapter, 2012</li>
-    <li>Public relations officer, SPE-CUSC, 2011</li>
-    <li>NNPC/ TEPNG JV Post-Graduate University Scholarship</li>
-</ul></p>
-<form action="contact.php" method="POST" onsubmit="return validation ();">
-<input type="text" name="name" placeholder="Name" id="name"> <br>
-<input type="email" name="email" placeholder="Email" id="email"> <br>
-<input type="text" name="title" placeholder="Title" id="title"> <br>
-<input type="text" name="Message" placeholder="Message" id="text">
-<input type="submit" name="attribute" value="Submit">
+            
+<label>Write your posts here</label>
+<form action="" method="post">
+    <input type="text" id="my text" value="text here" style="width:500px; height: 200px;">
+    <input type="button" value="submit">
 </form>
-<div id="eresult" style = "color:red;"></div>
-<script type="text/javascript">
-function validation(){
-    var name = document.getElementById ("name").value;
-    var email = document.getElementById ("email").value;
-if(name== '' || email== '')
-{
-    document.getElementById("eresult").innerHTML = "All Field Required";
-    return false;
-}
-else if(name.length<4){
-    document.getElementById("eresult").innerHTML = "Name must be atleast 4 characters";
-    return false;
-}
-else {
-    return true;
-}
-}
-</script>
+
 </body>
-<footer><a href="https://github.com/theokleiao">Projects on GitHub</a></footer>
+<footer>WIKIPOLI</footer>
 </html>
