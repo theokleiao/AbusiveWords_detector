@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Nov  1 12:31:56 2019
-
-@author: Grace
-"""
 from flask import Flask, request, jsonify
 import re
 import nltk
