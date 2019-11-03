@@ -1,8 +1,10 @@
-profanityfilter>=1.0
+profanityfilter==2.0.6
 Flask==1.1.1
 regex==2019.11.1
 nltk==3.4.5
-Flask==1.1.1
 requests==2.22.0
 jsonify==0.5
 gunicorn==19.9.0
+Werkzeug==0.16.0
+MarkupSafe==1.1.1
+itsdangerous==1.1.0
