@@ -2,9 +2,8 @@ from flask import Flask, request, jsonify
 import re
 import nltk
 nltk.download('punkt')
-#!pip install profanityfilter
 from nltk.corpus import stopwords
-#import traceback
+nltk.download('stopwords')
 from nltk.stem import WordNetLemmatizer
 from nltk import word_tokenize
 
