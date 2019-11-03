@@ -72,7 +72,7 @@ wikifilter = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/dectect', methods=['POST'])
+@app.route('/dectect', methods=['GET'])
 def detect():
     try:
         if request.method == 'POST':
