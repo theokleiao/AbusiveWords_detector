@@ -67,11 +67,11 @@ def censor(text):
 # Initialize the app
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods = ['GET','POST'])
 def home():
     return render_template('index.html')
 
-@app.route('/detect', methods=['GET'])
+@app.route('/detect', methods=['GET', 'POST'])
 def detect():
     if request.method == 'POST':
       post = request.json["post"]
