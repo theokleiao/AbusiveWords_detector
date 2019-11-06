@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import re
 import nltk
 nltk.download('punkt')
@@ -67,24 +67,20 @@ def censor(text):
 # Initialize the app
 wikifilter = Flask(__name__)
 
-@app.route('/')
+@wikifilter.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/dectect', methods=['GET'])
+@wikifilter.route('/detect', methods=['GET'])
 def detect():
-    try:
-        if request.method == 'POST':
-            post = request.json["post"]
-           
-            text = GetCleanText(post)
+    if request.method == 'POST':
+      post = request.json["post"]
+      text = GetCleanText(post)
+      prediction = censor(text)
+      return jsonify(summary = prediction)
 
-            prediction = censor(text)
-            return jsonify(summary = prediction)
-
-if __name__ == "__main__":
-    wikifilter.run(debug=True)
-
+if  __name__ == "__main__":
+  wikifilter.run(debug=True)
 
 
 
