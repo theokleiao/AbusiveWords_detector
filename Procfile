@@ -1,1 +1,1 @@
-web:gunicorn wikifilter:app
+web:gunicorn app:app
