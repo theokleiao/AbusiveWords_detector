@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify, render_template
 import re
 import nltk
-nltk.download('punkt')
+from nltk import word_tokenize
+from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 nltk.download('stopwords')
-from nltk.stem import WordNetLemmatizer
-from nltk import word_tokenize
+nltk.download('punkt')
+
 
 def GetCleanText(text):
   text = text.lower().split()
@@ -81,7 +82,6 @@ def detect():
 
 if  __name__ == "__main__":
   app.run(debug=True)
-
 
 
 
