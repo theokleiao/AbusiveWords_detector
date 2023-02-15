@@ -5,6 +5,6 @@ nltk==3.4.5
 requests==2.22.0
 jsonify==0.5
 gunicorn==19.9.0
-Werkzeug==0.16.0
+Werkzeug==2.2.3
 MarkupSafe==1.1.1
 itsdangerous==1.1.0
