@@ -1,5 +1,5 @@
 profanityfilter==2.0.6
-Flask==1.1.1
+Flask==2.3.2
 regex==2019.11.1
 nltk==3.4.5
 requests==2.22.0
